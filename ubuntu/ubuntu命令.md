@@ -72,6 +72,81 @@
 > 1. 进入书籍路径（有README.md）
 > 2. 执行book sm
 
+### git
+
+#### 配置文件
+
+1. git config --system --list
+
+> 查看系统git配置
+
+2. git config --global --list
+
+> - 必须配置
+> - git config --global  user.name "xxx"
+> - git config --global  user.email "xxx"
+
+#### 操作命令
+
+1. 删除分支
+
+> - 切换到其他分支：git checkout master
+> - 删除分支：git branch -D gh-pages
+
+#### 创建远程厂库并且完成提交和下载
+
+1. 创建远程厂库
+
+2. 将远程仓库克隆到本地 , 克隆时需要用***ssh***地址
+
+   ```
+   git clone url
+   ```
+
+3. 将克隆下来的文件全部剪切到项目中
+
+4. 重启项目,在控制台完成提交
+
+   ```
+   git add .                     提交全部到暂存区
+   git commit -m 更改内容        提交到本地仓库
+   git push                      提交到远程仓库
+   ```
+
+------
+
+- 查看本地/远程所有分支
+
+  ```
+  git branch -a
+  git branch不带参数,列出本地已经存在的分支，并且在当前分支的前面用*标记,加上-a参数可以查看所有分支列表，包括本地和远程,远程分支一般会用红色字体标记出来
+  ```
+
+- 新建分支并切换到指定分支
+
+  ```
+  git checkout -b 本地分支名 origin/远程分支名
+  
+  该命令可以将远程git仓库里的指定分支拉取到本地，这样就在本地新建了一个dev分支，并和指定的远程分支关联了起来。
+  ```
+
+- 将本地分支推送给远程
+
+  ```
+  git push <远程主机名> <本地分支名>:<远程分支名>
+  git push -u origin dev:release/caigou_v1.0
+  上述命令表示将本地 dev 分支推送到远程 release/caigou_v1.0 分支。
+  ```
+
+------
+
+1. git pull 拉取远程代码
+2. git fetch 更新本地代码
+3. 编写自己代码
+4. git add .
+5. git commit -m “”
+6. git push 推送到远程
+
 ## 操作命令
 
 ### 杀进程
