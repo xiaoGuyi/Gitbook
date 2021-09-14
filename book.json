@@ -1,0 +1,16 @@
+{
+    "plugins": [
+        "page-treeview",
+	"summary",
+	"toggle-chapters",
+	"theme-comscore"
+    ],
+    "pluginsConfig": {
+        "page-treeview": {
+            "copyright": "Copyright &#169; guyi",
+            "minHeaderCount": "2",
+            "minHeaderDeep": "6"
+        }
+    }
+}
+
